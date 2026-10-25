@@ -26,7 +26,8 @@ body {
 a { color: inherit; }
 .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
 .site-header { display: flex; justify-content: space-between; align-items: center; min-height: 86px; }
-.wordmark { text-decoration: none; font-family: Georgia, "Times New Roman", serif; font-size: 25px; font-weight: 700; letter-spacing: -.06em; }
+.wordmark { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-family: Georgia, "Times New Roman", serif; font-size: 25px; font-weight: 700; letter-spacing: -.06em; }
+.wordmark img { display: block; width: 38px; height: 38px; border-radius: 10px; }
 .wordmark-dot { color: var(--clay); }
 .site-header nav, .site-footer nav { display: flex; align-items: center; gap: 30px; }
 .site-header nav a, .site-footer nav a { color: var(--muted); font-size: 13px; text-decoration: none; }
@@ -41,14 +42,16 @@ h1 em, h2 em { color: var(--forest); font-weight: 400; }
 .hero-deck { max-width: 445px; margin-bottom: 27px; color: var(--muted); font-size: 17px; line-height: 1.75; }
 .text-link { color: var(--forest); font-size: 13px; font-weight: 650; text-decoration-thickness: 1px; text-underline-offset: 5px; }
 .text-link span { padding-left: 5px; }
-.hero-art { height: 390px; position: relative; overflow: hidden; border-radius: 48% 48% 12px 12px; background: #e6e9d9; }
-.sun { position: absolute; z-index: 1; top: 57px; right: 21%; width: 75px; aspect-ratio: 1; border-radius: 50%; background: var(--gold); }
-.hill { position: absolute; bottom: -80px; width: 120%; height: 270px; border-radius: 50% 50% 0 0; }
-.hill-back { left: -31%; bottom: -115px; background: #a9bca3; transform: rotate(-9deg); }
-.hill-front { right: -28%; bottom: -142px; background: #78947d; transform: rotate(10deg); }
-.path { position: absolute; z-index: 2; left: 43%; bottom: -50px; width: 170px; height: 295px; border-radius: 50% 50% 0 0; background: #e6d8b7; transform: rotate(15deg); }
-.path::before { content: ""; position: absolute; top: -5px; left: 27px; width: 112px; height: 280px; border-radius: 50% 50% 0 0; background: #78947d; }
-.art-caption { position: absolute; z-index: 3; bottom: 28px; left: 32px; color: #fffdf4; font-family: Georgia, "Times New Roman", serif; font-size: 15px; font-style: italic; }
+.app-preview { width: min(100%, 345px); margin: 0; justify-self: end; text-align: center; }
+.device-frame { overflow: hidden; padding: 7px; border: 1px solid rgba(28, 51, 42, .16); border-radius: 43px; background: #24392f; box-shadow: 0 24px 58px rgba(28, 51, 42, .18); }
+.device-frame img { display: block; width: 100%; height: auto; border-radius: 35px; }
+.app-preview figcaption { margin-top: 15px; color: var(--muted); font-size: 12px; letter-spacing: .02em; }
+.launch-status { border-block: 1px solid var(--line); background: var(--paper); }
+.launch-status-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 17px; }
+.launch-status-inner p { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--muted); font-size: 13px; }
+.launch-status-inner strong { color: var(--forest); }
+.status-dot { width: 8px; height: 8px; flex: none; border-radius: 50%; background: var(--clay); }
+.planned-price { font-size: 12px !important; }
 .intro-band { background: var(--forest); color: var(--cream); }
 .intro-inner { display: grid; grid-template-columns: .7fr 1.3fr; gap: 30px; align-items: start; padding-block: 47px; }
 .intro-inner .eyebrow { color: #d2dec9; padding-top: 8px; }
@@ -111,7 +114,8 @@ h2 { margin-bottom: 0; font-size: clamp(37px, 4.4vw, 52px); line-height: 1.1; }
   .site-header nav { gap: 17px; }
   .site-header nav a { font-size: 12px; }
   .hero { grid-template-columns: 1fr; gap: 40px; padding-top: 45px; padding-bottom: 62px; }
-  .hero-art { height: 330px; }
+  .app-preview { width: min(82%, 320px); justify-self: center; }
+  .launch-status-inner { align-items: flex-start; flex-direction: column; gap: 7px; }
   .intro-inner { grid-template-columns: 1fr; gap: 12px; padding-block: 34px; }
   .intro-inner .eyebrow { margin-bottom: 0; }
   .walk-section, .details-section { padding-block: 65px; }
