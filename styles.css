@@ -51,6 +51,10 @@ h1 em, h2 em { color: var(--forest); font-weight: 400; }
 .launch-status-inner p { display: flex; align-items: center; gap: 10px; margin: 0; color: var(--muted); font-size: 13px; }
 .launch-status-inner strong { color: var(--forest); }
 .status-dot { width: 8px; height: 8px; flex: none; border-radius: 50%; background: var(--clay); }
+.beta-cta { display: inline-flex; flex: none; align-items: center; gap: 9px; padding: 11px 17px; border-radius: 999px; background: var(--forest); color: var(--paper); font-size: 13px; font-weight: 650; text-decoration: none; transition: background-color .18s ease, transform .18s ease; }
+.beta-cta:hover { background: #244333; transform: translateY(-1px); }
+.beta-cta:focus-visible { outline: 3px solid var(--clay); outline-offset: 4px; }
+.beta-cta span { font-size: 16px; line-height: 1; }
 .planned-price { font-size: 12px !important; }
 .intro-band { background: var(--forest); color: var(--cream); }
 .intro-inner { display: grid; grid-template-columns: .7fr 1.3fr; gap: 30px; align-items: start; padding-block: 47px; }
